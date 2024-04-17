@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b. <br>
+    S = 1/2 x (a x b)
+</p>
+
+<p>Nhập cạnh a</p>
+<input type="number" id="a">
+
+<p>Nhập cạnh b</p>
+<input type="number" id="b">
+
+<button onclick="triangle()">Xem kết quả</button>
+<p id="kq"></p>
+</body>
+<script>
+    function triangle() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+
+        let s = 1/2 * (a * b);
+
+        document.getElementById("kq").innerHTML= s + " là diện tích của hình tam giác vuông"
+    }
+</script>
+</html>

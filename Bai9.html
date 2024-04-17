@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+    <br>
+    a,b,c > 0
+    <br>
+    a + b > c
+    <br>
+    b + c > a
+    <br>
+    a + c > b</p>
+
+<p>Nhập cạnh a: </p>
+<input type="number" id="a">
+<p>Nhập cạnh b: </p>
+<input type="number" id="b">
+<p>Nhập cạnh c: </p>
+<input type="number" id="c"> <br>
+<button onclick="TamGiac()">
+    Xem kết quả
+</button>
+<p id="kq"></p>
+</body>
+<script>
+function TamGiac() {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+
+    if (a > 0 && b > 0 && c > 0) {
+        if ((a + b > c) && (b + c > a) && (a + c > b)) {
+            document.getElementById("kq").innerHTML = 'Ba số: ' + a + ', ' + b + ', và ' + c + ' là một cạnh của tam giác.';
+        } else {
+            document.getElementById("kq").innerHTML = 'Ba số: ' + a + ', ' + b + ', và ' + c + ' không phải là cạnh của một tam giác.';
+        }
+    } else {
+        document.getElementById("kq").innerHTML = 'Các cạnh phải lớn hơn 0 để tạo thành một hình tam giác.';
+    }
+}
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a và b. <br>
+    S = a*b
+</p>
+
+<p>Nhập chiều rộng</p>
+<input type="number" id="a">
+<p>Nhập chiều dài</p>
+<input type="number" id="b"> <br>
+<button onclick="rectangular()" style="margin-top: 10px">Xem kết quả</button>
+<p id="kq"></p>
+</body>
+<script>
+    function rectangular() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+
+        let s = a * b;
+
+        if (a > b) {
+            document.getElementById("kq").innerHTML = "không thể ra kết quả vì chiều rộng không thể lớn hơn chiều dài"
+        } else {
+            document.getElementById("kq").innerHTML = s + " là diện tích của hình chữ nhật";
+        }
+    }
+</script>
+</html>

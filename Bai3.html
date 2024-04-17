@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 3: Tính diện tích hình vuông khi biết cạnh a. <br>
+    S = a*a
+</p>
+<p>Nhập cạnh a</p>
+<input type="number" id="a">
+<button onclick="area()" style="margin-top: 10px">Bấm để xem kết quả</button>
+<p id="kq"></p>
+</body>
+<script>
+    function area() {
+        let a = document.getElementById("a").value;
+        let s = (a * a);
+
+        document.getElementById("kq").innerHTML = s + " là diện tích của hình vuông ";
+    }
+</script>
+</html>

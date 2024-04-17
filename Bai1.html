@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Bài 1: Chuyển từ độ C sang độ F.
+
+    °C  x  9/5 + 32 = °F
+</p>
+
+<p>Nhập độ C</p>
+<input type="number" id="doCelsius" placeholder="Nhập nhiệt độ"> <br>
+<button onclick="temperature()" style="margin-top: 10px">Xem</button>
+<p id="kq"></p>
+</body>
+<script>
+    function temperature() {
+        let doCelsius = document.getElementById("doCelsius").value;
+        let doFahrenheit = (doCelsius * 9/5) + 32;
+
+        document.getElementById("kq").innerHTML=doCelsius + " độ C tương ứng với " + doFahrenheit.toFixed(2) + "độ F"
+    }
+</script>
+</html>
